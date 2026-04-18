@@ -44,7 +44,7 @@ public class ventana extends JFrame {
 	public JList lst_contactos; // Lista de contactos
 	public JScrollPane scrLista; // Scroll de la lista
 
-	// ======================= NUEVAS VARIABLES =======================
+	// ======================= VARIABLES =======================
 	// Componentes nuevos solicitados en la actividad
 	public JTable tabla; // Tabla para mostrar contactos
 	public DefaultTableModel modeloTabla; // Modelo de la tabla

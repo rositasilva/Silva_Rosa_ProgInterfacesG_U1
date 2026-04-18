@@ -105,7 +105,7 @@ public class logica_ventana implements ActionListener, ListSelectionListener, It
 	        return;
 	    }
 
-	    // Convertir índice visual a real (IMPORTANTE con filtro/orden)
+	    // Convertir índice visual a real (con filtro/orden)
 	    int filaReal = delegado.tabla.convertRowIndexToModel(fila);
 
 	    try {

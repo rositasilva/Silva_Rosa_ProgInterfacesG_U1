@@ -90,13 +90,12 @@ public class personaDAO {
 		// Recorre cada contacto
 		for (String contacto : datos) {
 			
-			// ======================= MEJORA IMPORTANTE =======================
+			// ======================= MEJORA =======================
 			// Se evita procesar el encabezado del archivo (NOMBRE;TELEFONO;...)
 			// y también líneas vacías que podrían generar errores
 			if(contacto.startsWith("NOMBRE") || contacto.trim().equals("")){
 				continue; // Salta esta línea y sigue con la siguiente
 			}
-			// ===============================================================
 			
 			// Crea una instancia de persona
 			persona p = new persona();
@@ -116,7 +115,7 @@ public class personaDAO {
 	// Método público para guardar los contactos modificados o eliminados
 	public void actualizarContactos(List<persona> personas) throws IOException {
 		
-		// ======================= CORRECCIÓN IMPORTANTE =======================
+		// ======================= CORRECCIÓN =======================
 		// En lugar de eliminar todo sin control, se reescribe correctamente el archivo
 
 		// Se crea un FileWriter en modo sobrescritura (false)
