@@ -67,7 +67,7 @@ public class ventana extends JFrame {
 		panel_estadisticas.setBackground(new Color(255, 228, 240));
 		pestañas.addTab("Estadísticas", panel_estadisticas);
 
-		// 1. INICIALIZAR COMPONENTES (Solo una vez)
+		// 1. INICIALIZAR COMPONENTES 
 		inicializarComponentes();
 		
 		// 2. APLICAR TEXTOS INICIALES
@@ -84,7 +84,7 @@ public class ventana extends JFrame {
 		    // Actualizar etiquetas y botones
 		    cambiarTextos(res); 
 
-		    // Actualizar encabezados de la tabla (Lo rosado de la imagen)
+		    // Actualizar encabezados de la tabla 
 		    String[] col = {
 		        res.getString("col_nombre"), 
 		        res.getString("col_telefono"), 
@@ -94,7 +94,7 @@ public class ventana extends JFrame {
 		    
 		    modeloTabla.setColumnIdentifiers(col);
 		    
-		    // Forzar redibujado
+		   
 		    tabla.getTableHeader().revalidate();
 		    tabla.getTableHeader().repaint();
 		});
@@ -151,7 +151,7 @@ public class ventana extends JFrame {
 	}
 
 	private void cambiarTextos(ResourceBundle res) {
-	    // ESTA ES LA LÍNEA QUE FALTA PARA EL TÍTULO DE LA VENTANA
+	
 	    this.setTitle(res.getString("titulo")); 
 
 	    // 1. Actualizar Pestañas
@@ -178,7 +178,7 @@ public class ventana extends JFrame {
 	    cmb_categoria.addItem(res.getString("amigos"));
 	    cmb_categoria.addItem(res.getString("trabajo"));
 
-	    // 5. ACTUALIZAR ENCABEZADOS DE LA TABLA (Con el for para que no falle)
+	    // 5. ACTUALIZAR ENCABEZADOS DE LA TABLA 
 	    String[] col = {
 	        res.getString("col_nombre"), 
 	        res.getString("col_telefono"), 
@@ -193,7 +193,7 @@ public class ventana extends JFrame {
 	        tabla.getColumnModel().getColumn(i).setHeaderValue(col[i]);
 	    }
 	    
-	    // Refresco visual del área rosada
+	    // Refresco visual 
 	    if (tabla.getTableHeader() != null) {
 	        tabla.getTableHeader().repaint();
 	    }
